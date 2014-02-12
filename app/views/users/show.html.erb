@@ -1,0 +1,46 @@
+<div class="row" style="margin-top:10px;">
+  	<div class="col-lg-8 col-lg-offset-2 text-center">
+  		<!-- Confirmation and Incentive Copy -->
+  		 <p style="font-size:20px;margin-bottom:10px;" class="text-center">Thanks for signing up, we'll let you know when it launches!</p>
+		<p>Help spread the word by sharing your unique URL below. <strong>Refer 3 friends for priority access and 50% off your first month</strong>. <% if @user.count %>So far your referral count is <%= @user.count %>.<% else %><% end %></p>
+		<!-- End Confirmation and Incentive Copy -->
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-6 col-lg-offset-3 text-center">
+		<!-- Referral URL -->
+		<p><input type="email" class="form-control url" value="<%= "#{root_url}?code=#{@user.code}" %>"></p>
+		<!-- End Referral URL -->
+
+	    <a class="btn btn-twitter" href="https://twitter.com/intent/tweet?related=getcranberry&url=<%=u "#{root_url}?code=#{@user.code}"%>&text=I+just+signed+up+for+@leadnurturingco,+to+convert+more+leads+into+customers.+Join+me+at" target="_blank">
+  			<i class="fa fa-twitter fa-lg" style="margin-right:5px;"></i> Twitter</a>
+ 	    <a class="btn btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<%=u "#{root_url}?code=#{@user.code}"%>" target="_blank">
+  			<i class="fa fa-facebook fa-lg" style="margin-right:5px;"></i> Facebook</a>
+	    <a class="btn btn-gplus" href="https://plus.google.com/share?url=<%= "#{root_url}?code=#{@user.code}" %>" onclick="javascript:window.open(this.href,
+	    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+  			<i class="fa fa-google-plus fa-lg" style="margin-right:5px;"></i> Google+</a>
+  		<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<%=u "#{root_url}?code=#{@user.code}"%>&amp;title=Lead%20Nurturing%20Software&amp;summary=Companies%20that%20excel%20at%20lead%20nurturing%20generate%2050%20percent%20more%20sales%20ready%20leads%20at%2033%20percent%20lower%20cost,%20so%20sign%20up%20today!" class="btn share btn-linkedin" target="blank"><i class="fa fa-linkedin fa-lg" style="margin-right:5px;"></i> LinkedIn</a>
+	</div>
+</div>
+
+<style>
+.btn-twitter {
+	color: #fff;
+	border: 1px solid #fff;
+}
+.btn-facebook {
+	color: #fff;
+	border: 1px solid #fff;
+}
+.btn-gplus {
+	color: #fff;
+	border: 1px solid #fff;
+}
+.btn-linkedin {
+	color: #fff;
+	border: 1px solid #fff;
+}
+.btn-gplus:hover, .btn-linkedin:hover, .btn-facebook:hover, .btn-twitter:hover {
+	color: #d4d4d4;
+}
+</style>

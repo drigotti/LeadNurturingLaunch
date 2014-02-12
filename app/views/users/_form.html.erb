@@ -1,0 +1,30 @@
+<%= form_for(@user) do |f| %>
+
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+       <p style="font-size:20px;margin-top:10px;margin-bottom:0px;" class="text-center">Do you want more customers at a lower cost?</p>
+    </div>
+  </div>
+  <!-- Sign Up Form -->
+  <div class="row" style="margin-top:0px;">
+    <div class="col-lg-1 col-lg-offset-2 hidden-xs col-md-2 col-md-offset-1 col-xs-1" >
+      <i class="fa fa-chevron-right fa-3x pull-right" style="margin-top:20px;"></i>
+    </div>
+    <div class="col-lg-6 col-md-6 col-xs-12">
+      <div class="input-group field">
+        <%= f.text_field :email, :class => "form-control signup-form", :placeholder => "Email address" %>
+        <%= f.hidden_field :code %>
+        <% if @user.errors.any? %><label class="control-label" for="inputError"><% @user.errors.full_messages.each do |msg| %><%= msg %><% end %></label><% end %>
+        <span class="input-group-btn">
+          <%= f.submit "Yes I do", :class => "btn btn-success signup-button" %>
+        </span>
+      </div>
+    </div>
+    <div class="col-lg-1 col-md-2 hidden-xs col-xs-1" >
+      <i class="fa fa-chevron-left fa-3x pull-left" style="margin-top:20px;"></i>
+    </div>
+  </div>
+  <!-- End Sign Up Form -->
+<% end %>
+
+

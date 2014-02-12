@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta Data can be added from config/application.yml -->
+  <title>Lead Nurturing Software</title>
+  <meta name="description" content="In-product and on-site marketing campaign manager.">
+  <meta property="og:site_name" content="Lead Nurturing Software"/>
+  <meta property="og:url" content="<%= root_url %>"/>
+  <!-- End Meta Data -->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Capriola' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/assets/favicon.ico" >
+  <style>
+  .logo a {
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Capriola', sans-serif;
+  }
+  body {
+    background-color: #ededed;
+  }
+  .hero {
+    background-color: #388ce0;
+    /* background-image:url('/assets/background-blur.png');
+    background-repeat:no-repeat;
+    background-size: 100%; */
+  }
+  .signup {
+    padding-top:10px;
+    padding-bottom:20px;
+    color: #fff;
+  }
+  .footer {
+    font-size: 13px;
+    color: gray;
+    margin-bottom:15px;
+  }
+  .benefit {
+    font-size:23px;
+    margin-bottom:5px;
+    color:#388ce0;
+    font-weight: 500;
+  }
+  </style>
+</head>
+<body>  
+
+
+  <div class="hero" style="padding-top:20px;">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <p class="logo text-center"><a href="/">LeadNurturing<span style="font-size:60%;">.co</span></a></p>
+          <div class="signup">
+            <%= yield %>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+  <div class="row" style="margin-bottom:40px;margin-top:40px;">
+    <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <p class="text">Just 21% of marketing leads convert into a sale and <strong>companies that excel at lead nurturing generate 50% more sales ready leads at 33% lower cost</strong>, yet 65% of B2B marketers have not established lead nurturing.</p>
+    </div>
+  </div>
+
+  <div class="row" style="margin-bottom:40px;">
+    <div class="col-lg-4 col-xs-12 text-center">
+      <!-- <i class="fa fa-magic" style="font-size:100px;color:gray;"></i> -->
+      <%= image_tag "autoresponder.png", :class=>"img-circle", :style=>"border: 5px solid white;width:150px;margin-bottom:10px;opacity:.7;" %>
+        <p class="benefit">Automated Nurturing</p>
+        <p class="text">Set up an email workflow to automatically nurture leads with a drip email campaign for a higher sales conversion.</p> 
+    </div>
+    <div class="col-lg-4 col-xs-12 text-center">
+      <%= image_tag "statistics.png", :class=>"img-circle", :style=>"border: 5px solid white;width:150px;margin-bottom:10px;opacity:.7;" %>
+        <p class="benefit">Powerful Reporting</p>
+        <p class="text">See which emails are working to quickly and easily improve for nurturing funnel and get more leads sales ready.</p> 
+    </div>
+    <div class="col-lg-4 col-xs-12 text-center">
+      <%= image_tag "email.png", :class=>"img-circle", :style=>"border: 5px solid white;width:150px;margin-bottom:10px;opacity:.7;" %>
+        <p class="benefit">Engaging Emails</p>
+        <p class="text">Create emails that convert and are completely custom to your needs and company the WYSIWYG email editor.</p> 
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <p class="footer">Source: MarketingSherpa<br/>hello@leadnurturing.co</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
